@@ -1,16 +1,42 @@
 # MSTestv2 Sandbox
 
-Step by step [MSTestv2](https://www.nuget.org/packages/MSTest.TestFramework/) unit testing guide with code examples
+Step by step [MSTestv2](https://www.nuget.org/packages/MSTest.TestFramework/) unit testing guide with code examples.
 
-## Adding tests
+## Testing with **MSTestv2**  
+
+Performing tests using **MSTestv2** Framework consists of executing a **Test Project** that contains **test classes** which then contain **test methods**.
+
+## Naming conventions
+
+### Projects and classes
+
+Naming convention for **Test Projects** and **test classes** is to start with the name of tested **Project** or **class** and add `Tests` or `Test` accordingly. E.g.
+
+* `MyProjectTests` - for **Test Project** that tests `MyProject` **Project**
+
+* `MyClassTest.cs` - for **test class** that tests `MyClass.cs` **class**
+
+### Methds
+
+In case of **test methods** the naming convenction consists of three parts:
+
+* tested method name
+* under what conditions
+* what is expected to happen
+
+```csharp
+MyMethod_True_ThrowsException(bool value)
+```
+
+Above name indicates that it tests `MyMethod` by passing `true` value as an argument and expects an **Exception** to be thrown.
+
+## Creating test project
 
 * Create test project
 
 ```powershell
 dotnet new mstest -o <Project_Name>
 ```
-
-  > It is a good practice to name the project following to the convention: `<TestedClass>.Tests`
 
 To declare that a class or method contains tests  
 
