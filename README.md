@@ -77,3 +77,5 @@ to run all test projects across the solution.
 * [Microsoft Docs:  Unit testing C# with MSTest and .NET artice](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest)
 
 * [Microsoft Developer's Writing tests with MSTest v2 YouTube video](https://www.youtube.com/watch?v=olbC6dPgWqQ)
+
+* [Official MsTestv2 Documentation](https://github.com/microsoft/testfx/blob/main/docs/README.md)
