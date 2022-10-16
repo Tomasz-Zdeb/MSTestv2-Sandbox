@@ -4,7 +4,8 @@ Step by step [MSTestv2](https://www.nuget.org/packages/MSTest.TestFramework/) un
 
 ## Testing with **MSTestv2**  
 
-Performing tests using **MSTestv2** Framework consists of executing a **Test Project** that contains **test classes** which then contain **test methods**.
+Performing tests using **MSTestv2** Framework consists of executing **test methods**, which are grouped into **test classes** and then into **Test Projects**. Single test methods can be executed separately or at once
+executed in paralell.
 
 ## Naming conventions
 
@@ -16,7 +17,7 @@ Naming convention for **Test Projects** and **test classes** is to start with th
 
 * `MyClassTest.cs` - for **test class** that tests `MyClass.cs` **class**
 
-### Methds
+### Methods
 
 In case of **test methods** the naming convenction consists of three parts:
 
@@ -30,26 +31,33 @@ MyMethod_True_ThrowsException(bool value)
 
 Above name indicates that it tests `MyMethod` by passing `true` value as an argument and expects an **Exception** to be thrown.
 
-## Creating test project
+## Test projects
 
-* Create test project
+To create test project use:
 
 ```powershell
 dotnet new mstest -o <Project_Name>
 ```
 
-To declare that a class or method contains tests  
+then add the tested project reference to test project
 
+```powershell
+dotnet add TEST_PROJECT_NAME/TEST_PROJECT_NAME.csproj reference PROJECT_NAME/PROJECT_NAME.csproj
+```
+
+<!-- REFACTOR -->
+To declare that a class or method contains tests  
+<!-- REFACTOR -->
 ```csharp
 [TestClass]
 ```
-
+<!-- REFACTOR -->
 and
-
+<!-- REFACTOR -->
 ```csharp
 [TestMethod]
 ```
-
+<!-- REFACTOR -->
 attributes are used.
 
 ## Running tests
